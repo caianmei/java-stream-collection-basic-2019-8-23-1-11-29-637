@@ -1,7 +1,6 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Filter {
@@ -13,10 +12,23 @@ public class Filter {
     }
 
     public List<Integer> filterEven() {
-        throw new NotImplementedException();
+    	List<Integer> result = new ArrayList<Integer>();
+    	for (Integer item : this.array) {
+			if (item % 2 == 0) {
+				result.add(item);
+			}
+		}
+    	return result;
     }
 
     public List<Integer> filterMultipleOfThree() {
-        throw new NotImplementedException();
+    	List<Integer> result = new ArrayList<Integer>();
+    	for (Integer item : this.array) {
+			if (item % 3 == 0) {
+				result.add(item);
+			}
+		}
+    	return result;
     }
+    
 }
